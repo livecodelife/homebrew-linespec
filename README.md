@@ -24,7 +24,7 @@ brew install linespec-beta
 
 ## About LineSpec
 
-**Provenance Records (v1.0.0 - Stable):**
+**Provenance Records (v1.4.0 - Stable):**
 - Structured YAML artifacts for architectural decisions
 - Git integration with commit validation
 - Scope enforcement and graph visualization
