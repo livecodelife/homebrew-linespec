@@ -19,7 +19,7 @@ brew install linespec-beta
 
 | Formula | Description | Status |
 |---------|-------------|--------|
-| `linespec` | Provenance Records - Structured YAML artifacts for documenting architectural decisions | ✅ Stable (v1.0.0) |
+| `linespec` | Provenance Records - Structured YAML artifacts for documenting architectural decisions | ✅ Stable (v1.4.0) |
 | `linespec-beta` | Provenance Records + Integration Testing features | 🚧 Beta |
 
 ## About LineSpec
