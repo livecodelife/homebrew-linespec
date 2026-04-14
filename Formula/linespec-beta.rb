@@ -11,7 +11,7 @@ class LinespecBeta < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/livecodelife/linespec/releases/download/v1.4.1-beta/linespec-beta_1.4.1-beta_darwin_amd64.tar.gz"
-      sha256 "406dc9c6eb5f6eb6e2f83c0fa53649cc6242ade5763b1566fdd6bf6cea05530a"
+      sha256 "dc77bdc35a189ed8cbdad7445d272bace7315bc5f0b8cc90118ed6f1ab04cb03"
 
       define_method(:install) do
         bin.install "linespec" => "linespec-beta"
@@ -19,7 +19,7 @@ class LinespecBeta < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/livecodelife/linespec/releases/download/v1.4.1-beta/linespec-beta_1.4.1-beta_darwin_arm64.tar.gz"
-      sha256 "2d4278765ce4387e82dfe5725ecf16aaee498121907c47cbff6c712fd3475fe1"
+      sha256 "d8d1b35b6f38d070780686c88f5e695d76cc45aa7d3b1d5724a52df1bb2616d1"
 
       define_method(:install) do
         bin.install "linespec" => "linespec-beta"
@@ -30,14 +30,14 @@ class LinespecBeta < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/livecodelife/linespec/releases/download/v1.4.1-beta/linespec-beta_1.4.1-beta_linux_amd64.tar.gz"
-      sha256 "e6b74d304ff35b813801dbd8e82f1680e6b95dc4c2a34f449364b3f792259670"
+      sha256 "ed6d3d99fd7d7acb0e7025a2983f2caddb13de562bb6e3ddcd4d6c04f4639a04"
       define_method(:install) do
         bin.install "linespec" => "linespec-beta"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/livecodelife/linespec/releases/download/v1.4.1-beta/linespec-beta_1.4.1-beta_linux_arm64.tar.gz"
-      sha256 "483ceff538662ce2cbcbdc219bdab2acded6c678f0e0b49f6c9211e395240d26"
+      sha256 "c30cc4708daa2cd9908177d80ab43938ac227ac2579bfef1b997717cff678eac"
       define_method(:install) do
         bin.install "linespec" => "linespec-beta"
       end
