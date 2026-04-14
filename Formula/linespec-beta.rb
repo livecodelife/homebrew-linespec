@@ -5,21 +5,21 @@
 class LinespecBeta < Formula
   desc "LineSpec (Beta) - Provenance Records + Integration Testing"
   homepage "https://github.com/livecodelife/linespec"
-  version "1.4.1"
+  version "1.4.3-beta"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/livecodelife/linespec/releases/download/v1.4.1/linespec-beta_1.4.1_darwin_amd64.tar.gz"
-      sha256 "337a5e30219e9040783c79b0ac6dbaaa1e998c77fbc6b640f61c103cbb5991c1"
+      url "https://github.com/livecodelife/linespec/releases/download/v1.4.3-beta/linespec-beta_1.4.3-beta_darwin_amd64.tar.gz"
+      sha256 "530efaafecabcb2fdc0c389e926c00cc32bf0f8d8ecd2d809bc7a665708bba3e"
 
       define_method(:install) do
         bin.install "linespec" => "linespec-beta"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/livecodelife/linespec/releases/download/v1.4.1/linespec-beta_1.4.1_darwin_arm64.tar.gz"
-      sha256 "2dd26151f6cc4386c86566fed49210c5dc26984917af2fa3d5acf555de66c1b5"
+      url "https://github.com/livecodelife/linespec/releases/download/v1.4.3-beta/linespec-beta_1.4.3-beta_darwin_arm64.tar.gz"
+      sha256 "aae2d818062665a263af4312991cf59dd33fc12c676818bf8266dd7a362ea9aa"
 
       define_method(:install) do
         bin.install "linespec" => "linespec-beta"
@@ -29,15 +29,15 @@ class LinespecBeta < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/livecodelife/linespec/releases/download/v1.4.1/linespec-beta_1.4.1_linux_amd64.tar.gz"
-      sha256 "caab66602a35487d9d401184756308a0c72cb0432d0c18010d536b565f4f8e14"
+      url "https://github.com/livecodelife/linespec/releases/download/v1.4.3-beta/linespec-beta_1.4.3-beta_linux_amd64.tar.gz"
+      sha256 "65a3d46d7141ab01cba6f7bbacdee2a8e564a08c88c2abd4d51b34d9b55165bd"
       define_method(:install) do
         bin.install "linespec" => "linespec-beta"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/livecodelife/linespec/releases/download/v1.4.1/linespec-beta_1.4.1_linux_arm64.tar.gz"
-      sha256 "7c30280c88cf6f46bfba84dd3be6c2956ec5cac3fb0b582d86ace3cfa3cdf3da"
+      url "https://github.com/livecodelife/linespec/releases/download/v1.4.3-beta/linespec-beta_1.4.3-beta_linux_arm64.tar.gz"
+      sha256 "7c8b4c99dd45eacc243fea512634539d638c33a426f7dbefac9018548ed03237"
       define_method(:install) do
         bin.install "linespec" => "linespec-beta"
       end
