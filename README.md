@@ -8,10 +8,10 @@ Homebrew formulas for installing [LineSpec](https://github.com/livecodelife/line
 # Tap this repository
 brew tap livecodelife/linespec
 
-# Install the stable version (Provenance Records only)
+# Install the stable version
 brew install linespec
 
-# Or install the beta version (includes LineSpec Testing)
+# Or install the beta version
 brew install linespec-beta
 ```
 
@@ -19,21 +19,15 @@ brew install linespec-beta
 
 | Formula | Description | Status |
 |---------|-------------|--------|
-| `linespec` | Provenance Records - Structured YAML artifacts for documenting architectural decisions | ✅ Stable (v1.4.0) |
-| `linespec-beta` | Provenance Records + Integration Testing features | 🚧 Beta |
+| `linespec` | Provenance Records - Structured YAML artifacts for documenting architectural decisions + Integration Testing features | ✅ Stable (v2.3.3) |
 
 ## About LineSpec
 
-**Provenance Records (v1.4.0 - Stable):**
+**Provenance Records (v2.3.3 - Stable):**
 - Structured YAML artifacts for architectural decisions
 - Git integration with commit validation
 - Scope enforcement and graph visualization
 - CLI tooling for creation, linting, and management
-
-**LineSpec Testing (Beta):**
-- DSL-based integration testing
-- Protocol-level proxy interception (MySQL, PostgreSQL, HTTP, Kafka)
-- Containerized service testing
 
 ## Documentation
 
