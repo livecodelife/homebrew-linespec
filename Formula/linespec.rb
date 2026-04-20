@@ -5,21 +5,21 @@
 class Linespec < Formula
   desc "LineSpec - Provenance Records and Integration Testing"
   homepage "https://github.com/livecodelife/linespec"
-  version "2.8.4"
+  version "2.8.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/livecodelife/linespec/releases/download/v2.8.4/linespec_2.8.4_darwin_amd64.tar.gz"
-      sha256 "84269c3b3b9c39966a441355631742a2b4fc7c267f415e843089dbbab020468f"
+      url "https://github.com/livecodelife/linespec/releases/download/v2.8.5/linespec_2.8.5_darwin_amd64.tar.gz"
+      sha256 "92b3b43afe465fd1bfa4d21f27d58994032bbead4a99e424f1d859fd697fec9a"
 
       define_method(:install) do
         bin.install "linespec"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/livecodelife/linespec/releases/download/v2.8.4/linespec_2.8.4_darwin_arm64.tar.gz"
-      sha256 "4773313156e877fa04c1cafc7a6064ce02e0377cd1f01bbe4982971f05af44c9"
+      url "https://github.com/livecodelife/linespec/releases/download/v2.8.5/linespec_2.8.5_darwin_arm64.tar.gz"
+      sha256 "bfa93546cf5220aef9901f7fa15b50d4d39c286a21f5957ed0e71d94b8bb2e84"
 
       define_method(:install) do
         bin.install "linespec"
@@ -29,15 +29,15 @@ class Linespec < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/livecodelife/linespec/releases/download/v2.8.4/linespec_2.8.4_linux_amd64.tar.gz"
-      sha256 "f9a0e2986968c6f2d209da5e5d4be678c0ebe592844c5a3d774465a57cbb8229"
+      url "https://github.com/livecodelife/linespec/releases/download/v2.8.5/linespec_2.8.5_linux_amd64.tar.gz"
+      sha256 "f8b09d84658a36acb8dcb74b90a62a5dc25c7897bfeb32c96fa7c73eca341135"
       define_method(:install) do
         bin.install "linespec"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/livecodelife/linespec/releases/download/v2.8.4/linespec_2.8.4_linux_arm64.tar.gz"
-      sha256 "378c3eb29bd5789638fd1dfc2fc4e45629dc67de357e63b8bb87bda05ee3a0c4"
+      url "https://github.com/livecodelife/linespec/releases/download/v2.8.5/linespec_2.8.5_linux_arm64.tar.gz"
+      sha256 "6cb745dc4b5352f182af8b427279c66155aa6ec6d727af8313d7d2bfc0f2c231"
       define_method(:install) do
         bin.install "linespec"
       end
@@ -45,7 +45,9 @@ class Linespec < Formula
   end
 
   def post_install
-    unless system("#{bin}/linespec", "build")
+    begin
+      system "#{bin}/linespec", "build"
+    rescue BuildError
       opoo "Could not build linespec:latest Docker image. Docker may not be running. Run `linespec build` manually after starting Docker."
     end
   end
